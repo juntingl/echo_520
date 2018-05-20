@@ -1,0 +1,25 @@
+{
+  "name": "echo",
+  "version": "0.0.1",
+  "description": "回声，小玩意，程序猿的自娱自乐～",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "gulp css"
+  },
+  "keywords": [
+    "Html",
+    "Css",
+    "JavaScript",
+    "Vue"
+  ],
+  "author": "Junting <342766475@qq.com> (https://github.com/twitchbody)",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^8.5.0",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "postcss-cssnext": "^3.1.0"
+  }
+}

@@ -1,0 +1,48 @@
+@keyframes brighten {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+}
+#echo {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.msg {
+  position: absolute;
+  padding: .3rem .5rem;
+  background: #1890ff;
+  color: #fff;
+  border-radius: 2rem;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+.msg.brighten {
+  animation: brighten 2s infinite;
+}
+.msg.hide {
+  transform: scale(0) !important;
+}
+.msg:after {
+  content: '.';
+  font-size: 0;
+  width: 0.5rem;
+  height: 0.75rem;
+  right: -0.45rem;
+  bottom: 0;
+  position: absolute;
+  border-left: 0.5rem solid #1890ff;
+  border-bottom: 0;
+  border-bottom-left-radius: 1rem;
+}

@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+#echo {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+}
+.msg {
+    position: absolute;
+    padding: 0.5rem;
+    background: #1890ff;
+    color: #FFF;
+    border-radius: 3rem;
+    white-space: nowrap;
+    /* 属性更改后，有一个0.2s的过渡 */
+    transition: all 0.2s ease-in-out;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: -0.35rem;
+        width: 0.5rem;
+        height: 1rem;
+        border-left: 0.5rem solid #1890ff;
+        border-bottom-left-radius: 0.75rem 0.8rem;
+    }
+
+    & .brighten {
+        animation: brighten 2s infinite;
+    }
+
+    & .hide {
+        transform: scale(0) !important;
+    }
+}
+
+@keyframes brighten {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}

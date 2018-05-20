@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div
+    id="echo"
+    tabindex="-1"
+    @keyup.enter="fire"
+    @keyup.space="fire"
+    @click="fire">
+    <div
+      v-for="{ message, style, classes, good } in msgs"
+      v-if="good"
+      :class="classes"
+      :style="style">
+      {{message}}
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
